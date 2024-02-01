@@ -12,7 +12,7 @@ async function getBlogs() {
   return response.json();
 }
 
-export default async function Page(/*{ params }: { params: { slug: string } }*/) {
+export default async function Page() {
   const blogs: Blog[] = await getBlogs();
   console.log(blogs);
   return (

@@ -13,15 +13,9 @@ async function getBlog(slug: string) {
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const blog: Blog = await getBlog(params.slug);
-  console.log('my blog', blog);
 
   return (<div>ID: {params.slug}
   <div>Blog Name: {blog.name}</div>
   </div>);
 }
 
-interface Blog {
-  id: number;
-  name: String;
-  content: String;
-}
