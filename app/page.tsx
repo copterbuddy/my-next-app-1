@@ -18,7 +18,7 @@ export default async function Page() {
   return (
     <div>
       Test Page
-      {blogs.map((blog: any, index: number) => (
+      {blogs.map((blog: Blog, index: number) => (
         <div key={blog.id}>
           <div>
             {blog.id} {blog.name} 
@@ -28,11 +28,4 @@ export default async function Page() {
       ))}
     </div>
   );
-}
-// {blog.content.substring(0, 20)}
-
-interface Blog {
-  id: number;
-  name: String;
-  content: String;
 }
